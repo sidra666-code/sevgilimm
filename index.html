@@ -1,10 +1,189 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-    <p>gjgnjgjfjgjhutghjfgjghhjghj</p>
-    <h1>trtttrhughgfhjew
-      
-    </h1></title>
-  </head>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♡ Yusuf ∞ Dilan ♡</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+    .kaydir-container { width: 100vw; height: 100vh; overflow-y: scroll; scroll-snap-type: y mandatory; }
+    .ekran { width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; background-size: cover; background-position: center; padding: 20px; scroll-snap-align: start; position: relative; }
+    .icerik { background: rgba(0,0,0,0.5); color: white; padding: 25px; border-radius: 20px; max-width: 600px; text-align: center; }
+    .message { background: rgba(255, 105, 180, 0.6); padding: 12px; border-radius: 15px; font-size: 15px; margin-bottom: 20px; }
+    .hint { font-size: 14px; color: #eee; margin-bottom: 10px; }
+    h1 { font-size: 26px; color: #ffccff; margin-bottom: 15px; }
+    input[type="password"] { width: 100%; padding: 12px; font-size: 16px; border-radius: 25px; border: none; outline: none; margin-bottom: 15px; background: rgba(255,255,255,0.7); color: #333; }
+    button { padding: 12px; font-size: 16px; font-weight: bold; background: rgba(255, 51, 153, 0.8); color: white; border: none; border-radius: 25px; cursor: pointer; }
+    .sure-kutu { background: rgba(128,0,128,0.7); padding: 15px 25px; border-radius: 15px; color: #ffb6ff; font-size: 20px; font-weight: bold; min-width: 80px; text-align: center; }
+    .sure-kutu div:first-child { font-size: 28px; color: #ff66cc; }
+    .ok { font-size: 50px; color: #ff69b4; margin-top: 30px; animation: okAnimasyon 1.5s infinite; cursor: pointer; }
+    @keyframes okAnimasyon { 0% { transform: translateY(0); } 50% { transform: translateY(10px); } 100% { transform: translateY(0); } }
+    .sarki-buton { border-radius: 50%; width: 70px; height: 70px; border: 3px solid #ff99cc; background-image: url('yusuf.png'); background-size: cover; background-position: center; animation: donme 4s linear infinite; cursor: pointer; }
+    @keyframes donme { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+    .snowflake { position: absolute; top: -10px; color: white; font-size: 1em; user-select: none; pointer-events: none; animation: fall linear infinite; }
+    @keyframes fall { 0% { transform: translateY(0) rotate(0); opacity: 1; } 100% { transform: translateY(100vh) rotate(360deg); opacity: 0; } }
+  </style>
+</head>
+<body>
+  <!-- Şifre ekranı -->
+  <div class="ekran" id="ilkSayfa" style="background-image: url('yusuf.png'); position: absolute; top: 0; left: 0; z-index: 100;">
+    <div class="icerik">
+      <div class="message">Küçük bir tartışma, büyük bir sevgiyi gölgeleyemez... Seni çok seviyorum, özür dilerim. ☁️❤️</div>
+      <h1>♡ Yusuf ∞ Dilan ♡</h1>
+      <div class="hint">Bu özel sayfaya erişmek için lütfen şifreyi giriniz</div>
+      <div class="hint"><strong>İPUCU:</strong> "Tanışma Tarihimiz"</div>
+      <input type="password" id="sifre" placeholder="Şifreyi girin...">
+      <button onclick="kontrolEt()">Aç</button>
+    </div>
+  </div>
+
+  <!-- İçerik alanı -->
+  <div class="kaydir-container" id="icerikAlan" style="display:none;">
+    <!-- Sayfa 1 -->
+    <div class="ekran" style="background-image: url('yusuf2.png');">
+      <div class="icerik">
+        <h1>♡ Yusuf ∞ Dilan ♡</h1>
+        <p>Gökyüzündeki yıldızlar kadar çok sebeplerim var seni sevmek için. Her biri senin bir özelliğini, bir anını, bir gülüşünü temsil ediyor. Sen benim için sadece bir sevgili değil, tüm evrenimsin.....</p>
+        <div class="ok">↓</div>
+      </div>
+    </div>
+
+    <!-- Sayfa 2 -->
+    <div class="ekran" style="background-image: url('yusuf3.png');">
+      <div class="icerik">
+        <h1>♡ Beraber Geçirdiğimiz Süre ♡</h1>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px;">
+          <div class="sure-kutu"><div id="gun">0</div><div>GÜN</div></div>
+          <div class="sure-kutu"><div id="saat">0</div><div>SAAT</div></div>
+          <div class="sure-kutu"><div id="dakika">0</div><div>DAKİKA</div></div>
+          <div class="sure-kutu"><div id="saniye">0</div><div>SANİYE</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sayfa 3 - Dokun ve kar efektli -->
+    <div class="ekran" id="karSayfasi" style="background-image: url('yusuf3.png');">
+      <div class="icerik" id="gizliMetin" style="display: none; transition: opacity 1s;">
+        <h1>♡ Özel Bir An ♡</h1>
+        <p>Bu anın bizim için ne kadar anlamlı olduğunu kelimelere dökmek zor...<br>
+        Ama bu kare her şeyi anlatıyor. Bizi, sevgimizi, anılarımızı...<br>
+        Bu fotoğrafta kalbimiz saklı.</p>
+      </div>
+      <div onclick="yaziyiGoster()" style="position: absolute; bottom: 30px; right: 30px; background: rgba(0,0,0,0.5); color: white; padding: 10px 15px; border-radius: 15px; font-size: 16px; cursor: pointer; z-index: 10;">📌 Dokun</div>
+    </div>
+
+    <!-- Sayfa 4 - Şarkılar -->
+    <div class="ekran" style="background-color: #1c1b2a;">
+      <div class="icerik">
+        <h1 style="color: #ff66cc; font-family: 'Segoe Script', cursive;">Bizim Şarkımız</h1>
+        <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0;">
+          <button onclick="secSarki(0)" class="sarki-buton"></button>
+          <button onclick="secSarki(1)" class="sarki-buton"></button>
+          <button onclick="secSarki(2)" class="sarki-buton"></button>
+        </div>
+        <div style="margin: 15px auto; width: 100%; max-width: 300px; height: 530px; border: 2px solid #ff99cc; border-radius: 20px; overflow: hidden;">
+          <iframe id="sarkiFrame" width="100%" height="100%" 
+          src="https://www.youtube.com/embed/4ukycxDtKYY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sayfa 5 - Şiir -->
+    <div class="ekran" style="background-color: #2c003e;">
+      <div class="icerik" style="max-width: 600px; text-align: left; font-size: 16px; line-height: 1.6;">
+        <h1 style="color: #ffccff; text-align: center;">MİLYON KERE DİLAN</h1>
+        <p>
+          Ben bir Dilan'dır tutturmuşum.<br>
+          Oh ne iyi, Dilan'lı içkiler içip<br>
+          Sarhoş oluyorum, ne güzel...<br><br>
+          Hoşuma gitmiyorsa rengi denizlerin,<br>
+          Biraz Dilan sürüyorum, güzelleşiyor.<br>
+          Şarkılar söylüyorum,<br>
+          Şiirler yazıyorum Dilan üstüne.<br><br>
+          Saatim her zaman Dilan’a beş var,<br>
+          Ya da Dilan’ı beş geçiyor.<br>
+          Gözümü yumsam aklımdan Dilan geçiyor.<br><br>
+          Mevsimlerden Dilan’dır,<br>
+          Günlerden Dilanertesi.<br>
+          Odur beni yaşatan.<br><br>
+          İki kere iki dört, elde var Dilan.<br>
+          Bundan böyle dünyada,<br>
+          Aşkın adı Dilan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sayfa 6 - Kapanış -->
+    <div class="ekran" style="background-color: #000010;">
+      <div class="icerik" style="max-width: 600px; text-align: center; font-size: 18px; line-height: 1.8; background: rgba(255, 192, 203, 0.1); color: #ffccee;">
+        <h1 style="font-size: 30px; color: #ff99cc;">Hayatımmm</h1>
+        <p>
+          Seni çok fazla üzdüğümün farkındayım.<br>
+          Kendi adıma ve annemin sana dedikleri hakkında çok özür dilerim.<br>
+          Bundan sonra seni üzmemek için elimden ne geliyorsa yapacağım.<br>
+          Bana güven sen... Seni çok seviyorum…<br><br>
+          <strong style="color: #ff66aa;">Vazgeçilmezimmm</strong>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function kontrolEt() {
+      const sifre = document.getElementById("sifre").value.trim();
+      if (sifre === "26/09/2024") {
+        document.getElementById("ilkSayfa").style.display = "none";
+        document.getElementById("icerikAlan").style.display = "block";
+      } else {
+        alert("Şifre yanlış 😢");
+      }
+    }
+
+    function tarihSayaci() {
+      const baslangic = new Date("2024-09-26T00:00:00");
+      setInterval(() => {
+        const simdi = new Date();
+        const fark = simdi - baslangic;
+        document.getElementById("gun").textContent = Math.floor(fark / (1000 * 60 * 60 * 24));
+        document.getElementById("saat").textContent = Math.floor((fark / (1000 * 60 * 60)) % 24);
+        document.getElementById("dakika").textContent = Math.floor((fark / (1000 * 60)) % 60);
+        document.getElementById("saniye").textContent = Math.floor((fark / 1000) % 60);
+      }, 1000);
+    }
+    tarihSayaci();
+
+    function secSarki(index) {
+      const sarkilar = [
+        "https://www.youtube.com/embed/jC0qEFZMxQo?autoplay=1",
+        "https://www.youtube.com/embed/8tUD-W2kSzk?autoplay=1",
+        "https://www.youtube.com/embed/4ukycxDtKYY?autoplay=1"
+      ];
+      document.getElementById("sarkiFrame").src = sarkilar[index];
+    }
+
+    function yaziyiGoster() {
+      const metin = document.getElementById("gizliMetin");
+      metin.style.display = "block";
+      metin.style.opacity = 0;
+      setTimeout(() => { metin.style.opacity = 1; }, 10);
+    }
+
+    setInterval(() => {
+      const karSayfasi = document.getElementById("karSayfasi");
+      const rect = karSayfasi.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.textContent = "❄";
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+        karSayfasi.appendChild(snowflake);
+        setTimeout(() => snowflake.remove(), 10000);
+      }
+    }, 200);
+  </script>
+</body>
 </html>
